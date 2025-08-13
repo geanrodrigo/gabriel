@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz aniversário, nosso eterno Gabriel!!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #fff;
+        }
+        header {
+            text-align: center;
+            padding: 2rem 1rem 1rem 1rem;
+            background: rgba(0,0,0,0.3);
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px #000;
+        }
+        header h2 {
+            font-size: 1.5rem;
+            margin-top: 0.5rem;
+            font-weight: 400;
+            color: #FFFFFF;
+            text-shadow: 1px 1px 6px #222;
+        }
+        .party-theme {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0 1rem 0;
+        }
+        .party-theme img {
+            width: 60px;
+            height: 60px;
+            filter: drop-shadow(0 0 8px #FFFFFF);
+            animation: bounce 1.2s infinite alternate;
+        }
+        @keyframes bounce {
+            to { transform: translateY(-12px); }
+        }
+        .carousel-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            background: rgba(0,0,0,0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 24px #0006;
+            padding: 1.5rem 1rem;
+            position: relative;
+        }
+        .carousel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel img {
+            max-width: 90%;
+            max-height: 350px;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px #2228;
+            border: 3px solid #ffd700;
+        }
+        .carousel-btn {
+            background: #ffd700;
+            color: #1e3c72;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin: 0 1rem;
+            box-shadow: 0 2px 8px #2228;
+            transition: background 0.2s;
+        }
+        .carousel-btn:hover {
+            background: #fff;
+        }
+        .carousel-indicator {
+            text-align: center;
+            margin-top: 0.5rem;
+            color: #ffd700;
+            font-size: 1rem;
+        }
+        .lyrics {
+            max-width: 700px;
+            margin: 3rem auto 2rem auto;
+            background: rgba(0,0,0,0.25);
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 2px 16px #0005;
+        }
+        .lyrics h3 {
+            color: #ffd700;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .lyrics pre {
+            font-family: inherit;
+            font-size: 1.1rem;
+            color: #fff;
+            white-space: pre-wrap;
+            background: none;
+            border: none;
+        }
+        footer {
+            text-align: center;
+            margin: 2rem 0 1rem 0;
+            color: #ffd700;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Feliz Aniversário, Gabriel!</h1>
+        <h2>Olhamos para trás e lembramos com carinho de cada passo que você deu, de cada sorriso, de cada conquista, nosso amor por você é imenso e estamos muito orgulhosos do homem incrível em que você está se tornando. Que a vida continue te presenteando com momentos lindos e que você nunca perca essa sua essência tão especial. É uma alegria imensa fazer parte da sua vida e saiba que estaremos sempre aqui, aplaudindo suas vitórias e te apoiando em cada desafio.</h2>
+        <div class="party-theme">
+            <img src="/home/grol/Downloads/aniversario/gabriel/ico/box.png" alt="Boxe" title="Boxe">
+            <img src="/home/grol/Downloads/aniversario/gabriel/ico/karate.jpg" alt="Karate" title="Karate">
+            <img src="/home/grol/Downloads/aniversario/gabriel/ico/judo.png" alt="Judô" title="Judô">
+            <img src="/home/grol/Downloads/aniversario/gabriel/ico/maromba.png" alt="<Maromba>" title="Maromba">
+            <img src="/home/grol/Downloads/aniversario/gabriel/ico/rock.png" alt="Rock N' Roll" title="Rock N' Roll">
+        </div>
+    </header>
+    <section class="carousel-container">
+        <div class="carousel">
+            <button class="carousel-btn" id="prevBtn">&#8592;</button>
+            <img id="carouselImg" src="Photos/01.jpg" alt="Foto de Gabriel">
+            <button class="carousel-btn" id="nextBtn">&#8594;</button>
+        </div>
+        <div class="carousel-indicator" id="carouselIndicator">1 / 61</div>
+    </section>
+    <section class="lyrics">
+        <h3>Simple Man - Lynyrd Skynyrd</h3>
+        <pre>
+Forget your lust for the rich man's gold
+All that you need is in your soul
+And you can do this, oh, baby, if you try
+All that I want for you, my son, is to be satisfied
+        </pre>
+    </section>
+    <footer>
+    Com todo o nosso amor, papai e mamãe.
+ 💙
+    </footer>
+    <script>
+        // Lista de fotos do carrossel
+        const photos = [
+            "Photos/01.jpg", "Photos/02.jpg", "Photos/03.jpg", "Photos/04.jpg", "Photos/05.jpg", "Photos/06.jpg", "Photos/07.jpg", "Photos/08.jpg", "Photos/09.jpg", "Photos/10.png", "Photos/11.jpg", "Photos/12.jpg", "Photos/13.jpg", "Photos/14.jpg", "Photos/15.jpg", "Photos/16.jpg", "Photos/17.jpg", "Photos/18.jpg", "Photos/19.jpg", "Photos/20.jpg", "Photos/21.jpg", "Photos/22.jpg", "Photos/23.jpg", "Photos/24.jpg", "Photos/25.jpg", "Photos/26.jpg", "Photos/27.jpg", "Photos/28.jpg", "Photos/29.jpg", "Photos/30.jpg", "Photos/31.jpg", "Photos/32.jpg", "Photos/33.jpg", "Photos/34.jpg", "Photos/35.jpg", "Photos/36.jpg", "Photos/37.jpg", "Photos/38.jpg", "Photos/39.jpg", "Photos/40.jpg", "Photos/41.jpg", "Photos/42.jpg", "Photos/43.jpg", "Photos/44.jpg", "Photos/45.jpg", "Photos/46.jpg", "Photos/47.jpg", "Photos/48.jpg", "Photos/49.jpg", "Photos/50.jpg", "Photos/51.jpg", "Photos/52.jpg", "Photos/53.jpg", "Photos/54.jpg", "Photos/55.jpg", "Photos/56.jpg", "Photos/57.jpg", "Photos/58.jpg", "Photos/59.jpg", "Photos/60.jpg", "Photos/61.jpeg"
+        ];
+        let current = 0;
+        const img = document.getElementById('carouselImg');
+        const indicator = document.getElementById('carouselIndicator');
+        document.getElementById('prevBtn').onclick = function() {
+            current = (current - 1 + photos.length) % photos.length;
+            img.src = photos[current];
+            indicator.textContent = `${current + 1} / ${photos.length}`;
+        };
+        document.getElementById('nextBtn').onclick = function() {
+            current = (current + 1) % photos.length;
+            img.src = photos[current];
+            indicator.textContent = `${current + 1} / ${photos.length}`;
+        };
+        // Carrossel automático
+        setInterval(function() {
+            current = (current + 1) % photos.length;
+            img.src = photos[current];
+            indicator.textContent = `${current + 1} / ${photos.length}`;
+        }, 3000); // Troca a cada 3 segundos
+    </script>
+</body>
+</html>

@@ -115,6 +115,43 @@
             color: #ffd700;
             font-size: 1rem;
         }
+        /* Balões animados */
+        .balloon {
+            position: fixed;
+            bottom: -120px;
+            width: 60px;
+            z-index: 999;
+            animation: floatBalloon 12s linear infinite;
+            opacity: 0.85;
+        }
+        @keyframes floatBalloon {
+            0% {
+                transform: translateY(0) scale(1) rotate(-8deg);
+                opacity: 0.85;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-110vh) scale(1.1) rotate(8deg);
+                opacity: 0;
+            }
+        }
+        /* Confetes animados */
+        .confetti {
+            position: fixed;
+            top: -20px;
+            width: 12px;
+            height: 18px;
+            border-radius: 50%;
+            opacity: 0.8;
+            z-index: 998;
+            animation: dropConfetti 6s linear infinite;
+        }
+        @keyframes dropConfetti {
+            0% { transform: translateY(0) rotate(0deg);}
+            100% { transform: translateY(110vh) rotate(360deg);}
+        }
     </style>
 </head>
 <body>
@@ -122,11 +159,11 @@
         <h1>Feliz Aniversário, Gabriel!</h1>
         <h2>Olhamos para trás e lembramos com carinho de cada passo que você deu, de cada sorriso, de cada conquista, nosso amor por você é imenso e estamos muito orgulhosos do homem incrível em que você está se tornando. Que a vida continue te presenteando com momentos lindos e que você nunca perca essa sua essência tão especial. É uma alegria imensa fazer parte da sua vida e saiba que estaremos sempre aqui, aplaudindo suas vitórias e te apoiando em cada desafio.</h2>
         <div class="party-theme">
-            <img src="https://geanrodrigo.github.io/gabriel/ico/box.png" alt="Boxe" title="Boxe">
-            <img src="https://geanrodrigo.github.io/gabriel/ico/karate.jpg" alt="Karate" title="Karate">
-            <img src="https://geanrodrigo.github.io/gabriel/ico/judo.png" alt="Judô" title="Judô">
-            <img src="https://geanrodrigo.github.io/gabriel/ico/maromba.png" alt="<Maromba>" title="Maromba">
-            <img src="https://geanrodrigo.github.io/gabriel/ico/rock.png" alt="Rock N' Roll" title="Rock N' Roll">
+            <img src="/home/grol/Downloads/aniversario/gabriel/ico/box.png" alt="Boxe" title="Boxe">
+            <img src="/home/grol/Downloads/aniversario/gabriel/ico/karate.jpg" alt="Karate" title="Karate">
+            <img src="/home/grol/Downloads/aniversario/gabriel/ico/judo.png" alt="Judô" title="Judô">
+            <img src="/home/grol/Downloads/aniversario/gabriel/ico/maromba.png" alt="<Maromba>" title="Maromba">
+            <img src="/home/grol/Downloads/aniversario/gabriel/ico/rock.png" alt="Rock N' Roll" title="Rock N' Roll">
         </div>
     </header>
     <section class="carousel-container">
@@ -150,6 +187,36 @@ All that I want for you, my son, is to be satisfied
     Com todo o nosso amor, papai e mamãe.
  💙
     </footer>
+    <!-- Balões de aniversário animados -->
+    <script>
+        // Balões animados com imagens de gatinhos
+        const balloonCats = [
+            'https://cdn.pixabay.com/photo/2017/11/09/21/41/cat-2934720_1280.png',
+            'https://cdn.pixabay.com/photo/2016/04/01/09/29/cat-1294361_1280.png',
+            'https://cdn.pixabay.com/photo/2017/01/06/19/15/cat-1958376_1280.png',
+            'https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.png'
+        ];
+        for (let i = 0; i < 8; i++) {
+            const balloon = document.createElement('img');
+            balloon.src = balloonCats[i % balloonCats.length];
+            balloon.className = 'balloon';
+            balloon.style.left = `${Math.random() * 90 + 2}vw`;
+            balloon.style.animationDelay = `${Math.random() * 8}s`;
+            balloon.style.filter = `drop-shadow(0 0 12px #ffd700)`;
+            document.body.appendChild(balloon);
+        }
+
+        // Confetes animados continuam iguais
+        const confettiColors = ['#ffd700', '#ff4f81', '#4fc3f7', '#81c784', '#ba68c8', '#ffb74d', '#fff'];
+        for (let i = 0; i < 30; i++) {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            confetti.style.left = `${Math.random() * 98}vw`;
+            confetti.style.background = confettiColors[i % confettiColors.length];
+            confetti.style.animationDelay = `${Math.random() * 6}s`;
+            document.body.appendChild(confetti);
+        }
+    </script>
     <script>
         // Lista de fotos do carrossel
         const photos = [

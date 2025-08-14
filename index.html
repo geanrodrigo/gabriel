@@ -192,11 +192,12 @@ All that I want for you, my son, is to be satisfied
         // Balões animados com imagens de gatinhos
         const balloonCats = [
             'https://geanrodrigo.github.io/gabriel/ico/01.jpg',
-            
+            'https://geanrodrigo.github.io/gabriel/ico/02.jpg',
             'https://geanrodrigo.github.io/gabriel/ico/03.jpg',
-           
+            'https://geanrodrigo.github.io/gabriel/ico/04.jpg',
+                     
         ];
-        for (let i = 0; i < 8; i++) {
+        for (let i = 0; i < 0; i++) {
             const balloon = document.createElement('img');
             balloon.src = balloonCats[i % balloonCats.length];
             balloon.className = 'balloon';
@@ -223,7 +224,7 @@ All that I want for you, my son, is to be satisfied
                 catDrop.style.animationDelay = `${Math.random() * 6}s`;
                 catDrop.style.background = 'none';
                 catDrop.onerror = function() {
-                    catDrop.src = '/home/grol/Downloads/aniversario/gabriel/gato.gif';
+                    catDrop.src = 'https://geanrodrigo.github.io/gabriel/ico/03.jpg';
                 };
                 document.body.appendChild(catDrop);
             } else {

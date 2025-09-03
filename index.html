@@ -172,16 +172,17 @@
             <img id="carouselImg" src="Photos/01.jpg" alt="Foto de Gabriel">
             <button class="carousel-btn" id="nextBtn">&#8594;</button>
         </div>
-        <div class="carousel-indicator" id="carouselIndicator">1 / 61</div>
+        <div class="carousel-indicator" id="carouselIndicator">1 / 67</div>
     </section>
     <section class="lyrics">
-        <h3>Simple Man - "Lynyrd Skynyrd"</h3>
-        <pre>
-Forget your lust for the rich man's gold
+    <pre>
+"Forget your lust for the rich man's gold
 All that you need is in your soul
 And you can do this, oh, baby, if you try
 All that I want for you, my son, is to be satisfied
-And be a simple kind of man
+And be a simple kind of man"
+        </div>
+<cite>— Lynyrd Skynyrd, "Simple Man"</cite>
         </pre>
     </section>
     <footer>
@@ -242,7 +243,7 @@ And be a simple kind of man
     <script>
         // Lista de fotos do carrossel
         const photos = [
-            "Photos/01.jpg", "Photos/02.jpg", "Photos/03.jpg", "Photos/04.jpg", "Photos/05.jpg", "Photos/06.jpg", "Photos/07.jpg", "Photos/08.jpg", "Photos/09.jpg", "Photos/10.png", "Photos/11.jpg", "Photos/12.jpg", "Photos/13.jpg", "Photos/14.jpg", "Photos/15.jpg", "Photos/16.jpg", "Photos/17.jpg", "Photos/18.jpg", "Photos/19.jpg", "Photos/20.jpg", "Photos/21.jpg", "Photos/22.jpg", "Photos/23.jpg", "Photos/24.jpg", "Photos/25.jpg", "Photos/26.jpg", "Photos/27.jpg", "Photos/28.jpg", "Photos/29.jpg", "Photos/30.jpg", "Photos/31.jpg", "Photos/32.jpg", "Photos/33.jpg", "Photos/34.jpg", "Photos/35.jpg", "Photos/36.jpg", "Photos/37.jpg", "Photos/38.jpg", "Photos/39.jpg", "Photos/40.jpg", "Photos/41.jpg", "Photos/42.jpg", "Photos/43.jpg", "Photos/44.jpg", "Photos/45.jpg", "Photos/46.jpg", "Photos/47.jpg", "Photos/48.jpg", "Photos/49.jpg", "Photos/50.jpg", "Photos/51.jpg", "Photos/52.jpg", "Photos/53.jpg", "Photos/54.jpg", "Photos/55.jpg", "Photos/56.jpg", "Photos/57.jpg", "Photos/58.jpg", "Photos/59.jpg", "Photos/60.jpg", "Photos/61.jpeg"
+            "Photos/01.jpg", "Photos/02.jpg", "Photos/03.jpg", "Photos/04.jpg", "Photos/05.jpg", "Photos/06.jpg", "Photos/07.jpg", "Photos/08.jpg", "Photos/09.jpg", "Photos/10.png", "Photos/11.jpg", "Photos/12.jpg", "Photos/13.jpg", "Photos/14.jpg", "Photos/15.jpg", "Photos/16.jpg", "Photos/17.jpg", "Photos/18.jpg", "Photos/19.jpg", "Photos/20.jpg", "Photos/21.jpg", "Photos/22.jpg", "Photos/23.jpg", "Photos/24.jpg", "Photos/25.jpg", "Photos/26.jpg", "Photos/27.jpg", "Photos/28.jpg", "Photos/29.jpg", "Photos/30.jpg", "Photos/31.jpg", "Photos/32.jpg", "Photos/33.jpg", "Photos/34.jpg", "Photos/35.jpg", "Photos/36.jpg", "Photos/37.jpg", "Photos/38.jpg", "Photos/39.jpg", "Photos/40.jpg", "Photos/41.jpg", "Photos/42.jpg", "Photos/43.jpg", "Photos/44.jpg", "Photos/45.jpg", "Photos/46.jpg", "Photos/47.jpg", "Photos/48.jpg", "Photos/49.jpg", "Photos/50.jpg", "Photos/51.jpg", "Photos/52.jpg", "Photos/53.jpg", "Photos/54.jpg", "Photos/55.jpg", "Photos/56.jpg", "Photos/57.jpg", "Photos/58.jpg", "Photos/59.jpg", "Photos/60.jpg", "Photos/61.jpeg", "Photos/62.jpg", "Photos/63.jpg", "Photos/64.jpg", "Photos/65.jpg", "Photos/66.jpg", "Photos/67.jpg"
         ];
         let current = 0;
         const img = document.getElementById('carouselImg');
@@ -262,7 +263,7 @@ And be a simple kind of man
             current = (current + 1) % photos.length;
             img.src = photos[current];
             indicator.textContent = `${current + 1} / ${photos.length}`;
-        }, 3000); // Troca a cada 3 segundos
+        }, 3000); // Troca a cada 2 segundos
     </script>
 </body>
 </html>
